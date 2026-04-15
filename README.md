@@ -4,6 +4,8 @@ Iron Layer detects prompt-injection risk in raw text arriving as "data" to an LL
 
 Each detonation produces a pair: `(raw_input_text → tickled_signals)` where `tickled_signals` is a normalized record of which dangerous tool intents the canary LLM was coaxed into invoking (e.g. `filesystem-read:/etc/passwd`, `network-egress:evil.com`, `code-exec:curl ...`).
 
+**Why build this?** → [The Trust Problem at the Heart of Every LLM Agent](why-iron-layer.md)
+
 **Scope:** label generation only. Classifier training is handled downstream by Featrix, which consumes the JSONL output.
 
 ## Quickstart
